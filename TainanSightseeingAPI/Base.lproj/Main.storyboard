@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Kit-6A-UCK">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,204 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TainanSightseeingAPI" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sYX-gN-z4V">
+                                <rect key="frame" x="86" y="324" width="219" height="66"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="台南觀光景點"/>
+                                <connections>
+                                    <segue destination="99w-Rl-wb2" kind="show" id="nAS-Za-x0m"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="cRc-Nx-T3e">
+                                <rect key="frame" x="37" y="88" width="317" height="228"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Image2" translatesAutoresizingMaskIntoConstraints="NO" id="7Xp-JT-K3Z">
+                                <rect key="frame" x="19" y="406" width="353" height="267"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sd5-eT-7bP">
+                                <rect key="frame" x="86" y="681" width="219" height="67"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="台南美食餐廳"/>
+                                <connections>
+                                    <segue destination="TvM-jU-HNy" kind="show" id="ma3-2V-OHC"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.92517006802721091" green="0.68680909863945583" blue="0.25395939625850339" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <navigationItem key="navigationItem" id="LVx-Hx-JKy"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="923.07692307692309" y="63.981042654028435"/>
+        </scene>
+        <!--台南市觀光景點-->
+        <scene sceneID="pKZ-gf-MEF">
+            <objects>
+                <tableViewController id="99w-Rl-wb2" customClass="AttractionsTableViewController" customModule="TainanSightseeingAPI" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="sPe-dP-U0D">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.92549019607843142" green="0.68627450980392157" blue="0.25490196078431371" alpha="1" colorSpace="calibratedRGB"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="attractionsCell" id="qE7-F8-WkH" customClass="AttractionsTableViewCell" customModule="TainanSightseeingAPI" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44.666666030883789" width="390" height="143.33332824707031"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qE7-F8-WkH" id="zYo-56-1Nj">
+                                    <rect key="frame" x="0.0" y="0.0" width="390" height="143.33332824707031"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Axu-kh-v7Q">
+                                            <rect key="frame" x="10" y="10" width="370" height="42"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mxN-sY-N23">
+                                            <rect key="frame" x="10" y="62" width="370" height="32.666666666666657"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dmn-vr-XPd">
+                                            <rect key="frame" x="10" y="104.66666666666667" width="370" height="28.666666666666671"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="Dmn-vr-XPd" secondAttribute="bottom" constant="10" id="43t-JY-A1I"/>
+                                        <constraint firstAttribute="trailing" secondItem="Axu-kh-v7Q" secondAttribute="trailing" constant="10" id="D6p-39-Pij"/>
+                                        <constraint firstAttribute="trailing" secondItem="Dmn-vr-XPd" secondAttribute="trailing" constant="10" id="EN8-3X-eIg"/>
+                                        <constraint firstItem="Axu-kh-v7Q" firstAttribute="top" secondItem="zYo-56-1Nj" secondAttribute="top" constant="10" id="LIO-lS-iwO"/>
+                                        <constraint firstAttribute="trailing" secondItem="mxN-sY-N23" secondAttribute="trailing" constant="10" id="MBi-Ne-Nu5"/>
+                                        <constraint firstItem="mxN-sY-N23" firstAttribute="leading" secondItem="zYo-56-1Nj" secondAttribute="leading" constant="10" id="XOw-PO-xFC"/>
+                                        <constraint firstItem="Dmn-vr-XPd" firstAttribute="leading" secondItem="zYo-56-1Nj" secondAttribute="leading" constant="10" id="cTa-8f-nXa"/>
+                                        <constraint firstItem="Dmn-vr-XPd" firstAttribute="top" secondItem="mxN-sY-N23" secondAttribute="bottom" constant="10" id="fTL-UK-pId"/>
+                                        <constraint firstItem="mxN-sY-N23" firstAttribute="top" secondItem="Axu-kh-v7Q" secondAttribute="bottom" constant="10" id="gwI-DS-IPZ"/>
+                                        <constraint firstItem="Axu-kh-v7Q" firstAttribute="leading" secondItem="zYo-56-1Nj" secondAttribute="leading" constant="10" id="kQu-um-xZb"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="addressLabel" destination="mxN-sY-N23" id="gLs-dQ-Tgh"/>
+                                    <outlet property="introduceLabel" destination="Dmn-vr-XPd" id="0Lb-lF-K5X"/>
+                                    <outlet property="nameLabel" destination="Axu-kh-v7Q" id="BoX-bE-IiI"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="99w-Rl-wb2" id="DRW-cK-vz2"/>
+                            <outlet property="delegate" destination="99w-Rl-wb2" id="5XI-R9-Vfl"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="台南市觀光景點" id="Ox5-Jr-Vgt"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ewp-RI-Hdd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1696.9230769230769" y="-225.35545023696682"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="SNe-Re-BXt">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Kit-6A-UCK" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="kAo-wR-LVd">
+                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="7EP-e1-YyX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TvF-CG-nhN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="146" y="64"/>
+        </scene>
+        <!--台南市美食餐廳-->
+        <scene sceneID="H9q-sC-tpB">
+            <objects>
+                <tableViewController id="TvM-jU-HNy" customClass="FoodTableViewController" customModule="TainanSightseeingAPI" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="LDV-Xk-tvn">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.92549019607843142" green="0.68627450980392157" blue="0.25490196078431371" alpha="1" colorSpace="calibratedRGB"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="foodCell" rowHeight="131" id="DdJ-zb-lae" customClass="FoodTableViewCell" customModule="TainanSightseeingAPI" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44.666666030883789" width="390" height="131"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DdJ-zb-lae" id="M05-FM-BvD">
+                                    <rect key="frame" x="0.0" y="0.0" width="390" height="131"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sg6-G4-woD">
+                                            <rect key="frame" x="10" y="100.66666666666663" width="370" height="20.333333333333329"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ycl-bn-UiT">
+                                            <rect key="frame" x="10" y="62" width="370" height="28.666666666666657"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="81H-gd-uNt">
+                                            <rect key="frame" x="10" y="10" width="370" height="42"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="81H-gd-uNt" firstAttribute="leading" secondItem="M05-FM-BvD" secondAttribute="leading" constant="10" id="0Mm-cV-JGo"/>
+                                        <constraint firstAttribute="trailing" secondItem="81H-gd-uNt" secondAttribute="trailing" constant="10" id="2jS-b9-mcd"/>
+                                        <constraint firstItem="Sg6-G4-woD" firstAttribute="leading" secondItem="M05-FM-BvD" secondAttribute="leading" constant="10" id="87W-Ax-Qzv"/>
+                                        <constraint firstAttribute="bottom" secondItem="Sg6-G4-woD" secondAttribute="bottom" constant="10" id="DME-Cq-rFy"/>
+                                        <constraint firstItem="81H-gd-uNt" firstAttribute="top" secondItem="M05-FM-BvD" secondAttribute="top" constant="10" id="MbM-tM-sxB"/>
+                                        <constraint firstItem="Sg6-G4-woD" firstAttribute="top" secondItem="ycl-bn-UiT" secondAttribute="bottom" constant="10" id="Ulp-py-yPs"/>
+                                        <constraint firstAttribute="trailing" secondItem="ycl-bn-UiT" secondAttribute="trailing" constant="10" id="YgK-vs-juL"/>
+                                        <constraint firstAttribute="trailing" secondItem="Sg6-G4-woD" secondAttribute="trailing" constant="10" id="arY-l5-Cd4"/>
+                                        <constraint firstItem="ycl-bn-UiT" firstAttribute="leading" secondItem="M05-FM-BvD" secondAttribute="leading" constant="10" id="c3d-wz-9mW"/>
+                                        <constraint firstItem="ycl-bn-UiT" firstAttribute="top" secondItem="81H-gd-uNt" secondAttribute="bottom" constant="10" id="msr-3c-FXT"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="addressLabel" destination="ycl-bn-UiT" id="FIb-10-ynu"/>
+                                    <outlet property="introductionLabel" destination="Sg6-G4-woD" id="bLZ-eF-Ye7"/>
+                                    <outlet property="nameLabel" destination="81H-gd-uNt" id="BxR-Ya-PmQ"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="TvM-jU-HNy" id="zyp-dn-2bs"/>
+                            <outlet property="delegate" destination="TvM-jU-HNy" id="OEi-x1-seg"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="台南市美食餐廳" id="P5U-h5-Ekn"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L8c-Bd-cih" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1696.9230769230769" y="435.78199052132697"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Image" width="720" height="481"/>
+        <image name="Image2" width="600" height="314"/>
+    </resources>
 </document>
